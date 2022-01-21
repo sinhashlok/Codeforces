@@ -4,23 +4,15 @@ using namespace std;
 int main()
 {
     string s;
-    int count = 1, n = 0;
-
     cin >> s;
+    sort(s.begin(), s.end());
+    
+    int count = 0;
 
-    for (int i = 0; i < s.length(); i++)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            if (s[i] == s[j])
-                n++;
-        }
-
-        if (n == 0)
-            count ++;
-        
-        n = 0;
-    }
+    for (int i = 1; i < s.length(); i++)
+        if (s[i-1] != s[i])
+            count++;
+    
 
     if (count % 2 == 0)
         cout << "IGNORE HIM!";
