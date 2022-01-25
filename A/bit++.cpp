@@ -9,7 +9,7 @@ int main()
 
     int n;
     cin >> n;
-    int arr[n], count{ 0 };
+    int arr[n], count = 0;
     string s;
 
     for (size_t i = 0; i < n; i++)
